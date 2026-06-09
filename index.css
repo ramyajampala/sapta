@@ -622,15 +622,18 @@ footer{
 }
 
 .hero-title span{
-    background:linear-gradient(
-        90deg,
-        #7c5cff,
-        #42d4ff
-    );
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-}
+  background:linear-gradient(
+      90deg,
+      #7c5cff,
+      #42d4ff
+  );
 
+  background-clip:text;
+  -webkit-background-clip:text;
+
+  color:transparent;
+  -webkit-text-fill-color:transparent;
+}
 .hero-sub{
     font-size:1.1rem;
     line-height:1.8;
