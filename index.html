@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SaptaAI — AI Automation & Digital Solutions Agency</title>
+
+<!-- SEO Meta -->
+<meta name="description" content="SaptaAI is an AI automation and digital solutions agency in Hyderabad. We build AI systems, websites, and automation workflows that help small businesses save time, generate more leads, and grow faster.">
+<meta name="keywords" content="AI automation agency Hyderabad, business automation India, AI digital marketing, website development Hyderabad, lead generation AI, process automation small business">
+<meta name="robots" content="index, follow">
+<meta name="author" content="SaptaAI">
+
+<!-- Open Graph -->
+<meta property="og:type"        content="website">
+<meta property="og:title"       content="SaptaAI — AI Automation & Digital Solutions">
+<meta property="og:description" content="We build AI systems, websites, and automation workflows that help businesses save time, generate leads, and scale efficiently.">
+<meta property="og:url"         content="https://saptaai.com">
+<meta property="og:image"       content="https://saptaai.com/og-image.png">
+<meta property="og:site_name"   content="SaptaAI">
+
+<!-- Twitter Card -->
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="SaptaAI — AI Automation & Digital Solutions">
+<meta name="twitter:description" content="AI automation, website development, and digital marketing for small businesses.">
+<meta name="twitter:image"       content="https://saptaai.com/og-image.png">
+
+<!-- LocalBusiness Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "SaptaAI",
+  "description": "AI automation and digital solutions agency helping small businesses save time and grow faster.",
+  "email": "saptaai07@gmail.com",
+  "telephone": "+918074916835",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hyderabad",
+    "addressRegion": "Telangana",
+    "addressCountry": "IN"
+  },
+  "url": "https://saptaai.com",
+  "serviceArea": "India",
+  "priceRange": "₹₹",
+  "openingHours": "Mo-Fr 09:00-18:00"
+}
+</script>
+
+<!-- Fonts & Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div id="cursor-dot" aria-hidden="true"></div>
+<div id="cursor-ring" aria-hidden="true"></div>
+
+<!-- ═══ NAV ═══ -->
+<nav id="main-nav" role="navigation" aria-label="Main navigation">
+  <a href="#hero" class="nav-logo" aria-label="SaptaAI home">SaptaAI</a>
+
+  <ul class="nav-links" role="list">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why-us">Why Us</a></li>
+    <li><a href="#testimonials">Results</a></li>
+    <li><a href="#contact" class="nav-cta" data-magnetic>Get in Touch</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <div class="theme-toggle" id="theme-toggle" title="Toggle theme" role="button" tabindex="0" aria-label="Toggle color theme">
+      <span class="toggle-label" id="toggle-label">Dark</span>
+      <div class="toggle-track" id="toggle-track">
+        <div class="toggle-thumb" id="toggle-thumb"></div>
+      </div>
+    </div>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="nav-mobile-drawer">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile drawer -->
+<div class="nav-mobile-drawer" id="nav-mobile-drawer" role="dialog" aria-label="Mobile navigation">
+  <a href="#about"       onclick="closeDrawer()">About</a>
+  <a href="#services"    onclick="closeDrawer()">Services</a>
+  <a href="#why-us"      onclick="closeDrawer()">Why Us</a>
+  <a href="#testimonials" onclick="closeDrawer()">Results</a>
+  <a href="#process"     onclick="closeDrawer()">Process</a>
+  <a href="#faq"         onclick="closeDrawer()">FAQ</a>
+  <a href="#contact"     onclick="closeDrawer()">Get in Touch</a>
+  <a href="https://wa.me/918074916835?text=Hi%20SaptaAI,%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener" class="drawer-whatsapp">
+    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+  </a>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero" aria-label="Hero section">
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <div class="hero-orb" aria-hidden="true"></div>
+
+  <div class="hero-content">
+
+    <div class="hero-left">
+
+      <div class="hero-badge" id="hb">
+        <span class="badge-dot" aria-hidden="true"></span>
+        AI Automation
+      </div>
+
+      <h1 class="hero-title" id="ht">
+        We Help Businesses<br>
+        <span>Save Time &amp; Grow</span><br>
+        With AI.
+      </h1>
+
+      <p class="hero-sub" id="hs">
+        From AI automation to lead generation websites — we build digital systems that run your business, so you don't have to do it manually.
+      </p>
+
+      <div class="hero-actions" id="ha">
+        <a href="https://wa.me/918074916835?text=Hi%20SaptaAI,%20I%20would%20like%20a%20free%20consultation." target="_blank" rel="noopener" class="btn-primary">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Book Free Consultation
+        </a>
+        <a href="#services" class="btn-ghost">
+          See What We Do
+        </a>
+      </div>
+
+      <div class="hero-social-proof" id="hsp">
+        
+        <div class="hsp-divider" aria-hidden="true"></div>
+        <div class="hsp-item">
+          <span class="hsp-num">1–4 wk</span>
+          <span class="hsp-label">Avg. delivery</span>
+        </div>
+        <div class="hsp-divider" aria-hidden="true"></div>
+        <div class="hsp-item">
+          <span class="hsp-num">Free</span>
+          <span class="hsp-label">First consultation</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero-right" aria-hidden="true">
+      <div class="ai-orb">
+        <div class="orb-ring ring-1"></div>
+        <div class="orb-ring ring-2"></div>
+        <div class="orb-ring ring-3"></div>
+        <div class="orb-core"></div>
+        <div class="orb-label orb-label-1">AI Automation</div>
+        <div class="orb-label orb-label-2">Lead Gen</div>
+        <div class="orb-label orb-label-3">Web Dev</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="scroll-hint" aria-hidden="true">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about" aria-label="About SaptaAI">
+  <div>
+    <div class="section-tag">Who We Are</div>
+    <h2 class="section-title">Built for businesses<br>that want to grow.</h2>
+    <div class="divider" aria-hidden="true"></div>
+    <p class="about-body">SaptaAI is a Hyderabad-based AI automation and digital solutions agency. We work with small businesses, local brands, and startups to replace manual, repetitive work with intelligent automated systems — so you can focus on what you do best.</p>
+    <p class="about-body">Whether you need a lead-generating website, a WhatsApp automation, or a full business workflow built on AI — we design, build, and support it end-to-end.</p>
+    <div class="pill-group" role="list">
+      <span class="pill pill-v" role="listitem">AI Solutions</span>
+      <span class="pill pill-b" role="listitem">Product Dev</span>
+      <span class="pill pill-g" role="listitem">Client Success</span>
+      <span class="pill pill-b" role="listitem">Sales Strategy</span>
+    </div>
+  </div>
+  <div class="about-visual" aria-hidden="true">
+    <div class="afc"><div class="afc-label">Active Projects</div><div class="afc-val">20+</div></div>
+    <div class="afc"><div class="afc-label">Client Satisfaction</div><div class="afc-val">98%</div></div>
+    <div class="afc"><div class="afc-icon">🤖</div><div class="afc-label">AI-Powered</div><div class="afc-sub">Across all touchpoints</div></div>
+  </div>
+</section>
+
+<!-- ═══ SERVICES ═══ -->
+<section id="services" aria-label="Our services">
+  <div class="sh">
+    <div class="section-tag">What We Build</div>
+    <h2 class="section-title">End-to-end digital solutions.</h2>
+    <p class="section-sub">From your first website to full AI-powered business automation — we cover everything.</p>
+  </div>
+  <div class="services-grid">
+
+    <div class="svc-card" data-hover>
+      <div class="svc-line" style="background:linear-gradient(90deg,#6c63ff,transparent)" aria-hidden="true"></div>
+      <div class="svc-icon si-a" aria-hidden="true">🤖</div>
+      <div class="svc-title">AI Automation Systems</div>
+      <p class="svc-desc">We connect your tools, automate your follow-ups, and build AI workflows using Make, Zapier, n8n, and OpenAI — so your business runs 24/7 without you lifting a finger.</p>
+      <span class="svc-pill" style="background:rgba(108,99,255,.1);color:var(--accent2);border:1px solid rgba(108,99,255,.18)">Make · n8n · OpenAI · Zapier</span>
+    </div>
+
+    <div class="svc-card" data-hover>
+      <div class="svc-line" style="background:linear-gradient(90deg,#38bdf8,transparent)" aria-hidden="true"></div>
+      <div class="svc-icon si-b" aria-hidden="true">🌐</div>
+      <div class="svc-title">Lead-Generating Websites</div>
+      <p class="svc-desc">Fast, mobile-first websites built to convert visitors into inquiries. We don't just design — we build with clear CTAs, contact forms, and WhatsApp integration built in from day one.</p>
+      <span class="svc-pill" style="background:rgba(56,189,248,.1);color:#7dd3fc;border:1px solid rgba(56,189,248,.18)">Web · Landing Pages · SEO</span>
+    </div>
+
+    <div class="svc-card" data-hover>
+      <div class="svc-line" style="background:linear-gradient(90deg,#34d399,transparent)" aria-hidden="true"></div>
+      <div class="svc-icon si-c" aria-hidden="true">📡</div>
+      <div class="svc-title">AI-Driven Digital Marketing</div>
+      <p class="svc-desc">Automated content pipelines, smart ad targeting, and data-backed social media management that builds your audience and turns attention into booked appointments and sales.</p>
+      <span class="svc-pill" style="background:rgba(52,211,153,.1);color:#6ee7b7;border:1px solid rgba(52,211,153,.18)">Social · Ads · Content</span>
+    </div>
+
+    <div class="svc-card" data-hover>
+      <div class="svc-line" style="background:linear-gradient(90deg,#f59e0b,transparent)" aria-hidden="true"></div>
+      <div class="svc-icon si-d" aria-hidden="true">⚡</div>
+      <div class="svc-title">Business Process Automation</div>
+      <p class="svc-desc">Stop doing things manually. We automate invoicing, lead follow-up, appointment reminders, WhatsApp responses, and more — saving you hours every single week.</p>
+      <span class="svc-pill" style="background:rgba(245,158,11,.1);color:#fcd34d;border:1px solid rgba(245,158,11,.18)">CRM · WhatsApp · Workflows</span>
+    </div>
+
+    <div class="svc-card" data-hover>
+      <div class="svc-line" style="background:linear-gradient(90deg,#f472b6,transparent)" aria-hidden="true"></div>
+      <div class="svc-icon si-e" aria-hidden="true">🎯</div>
+      <div class="svc-title">Lead Generation Systems</div>
+      <p class="svc-desc">We build end-to-end lead funnels — from landing pages and ad campaigns to automated follow-up sequences that nurture and convert prospects while you sleep.</p>
+      <span class="svc-pill" style="background:rgba(244,114,182,.1);color:#f9a8d4;border:1px solid rgba(244,114,182,.18)">Funnels · Forms · Follow-up</span>
+    </div>
+
+    <div class="svc-card" data-hover>
+      <div class="svc-line" style="background:linear-gradient(90deg,#a78bfa,transparent)" aria-hidden="true"></div>
+      <div class="svc-icon si-f" aria-hidden="true">✍️</div>
+      <div class="svc-title">Content &amp; Social Media</div>
+      <p class="svc-desc">Consistent, engaging content across Instagram, LinkedIn, and more — planned, created, and scheduled using AI-assisted workflows so your brand stays visible every day.</p>
+      <span class="svc-pill" style="background:rgba(167,139,250,.1);color:#c4b5fd;border:1px solid rgba(167,139,250,.18)">Instagram · LinkedIn · Reels</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ WHO WE HELP ═══ -->
+<section id="who-we-help" aria-label="Who we help">
+  <div class="sh">
+    <div class="section-tag">Who We Help</div>
+    <h2 class="section-title">Built for your kind of business.</h2>
+    <p class="section-sub">We work with businesses that are ready to stop doing things manually and start growing with the right systems.</p>
+  </div>
+  <div class="who-grid">
+    <div class="who-card">
+      <div class="who-icon" aria-hidden="true">🏪</div>
+      <div class="who-title">Local Businesses</div>
+      <p class="who-desc">Shops, restaurants, salons, clinics — we automate your bookings, follow-ups, and online presence.</p>
+    </div>
+    <div class="who-card">
+      <div class="who-icon" aria-hidden="true">🚀</div>
+      <div class="who-title">Startups</div>
+      <p class="who-desc">Early-stage teams who need to move fast. We build your digital foundation and automate growth from day one.</p>
+    </div>
+    <div class="who-card">
+      <div class="who-icon" aria-hidden="true">💼</div>
+      <div class="who-title">Service Businesses</div>
+      <p class="who-desc">Coaches, consultants, agencies — we build lead funnels and automated client onboarding that saves hours every week.</p>
+    </div>
+    <div class="who-card">
+      <div class="who-icon" aria-hidden="true">🛒</div>
+      <div class="who-title">E-commerce Brands</div>
+      <p class="who-desc">Online stores needing automated order follow-up, abandoned cart recovery, and marketing workflows.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHY CHOOSE US ═══ -->
+<section id="why-us" aria-label="Why choose SaptaAI">
+  <div class="sh">
+    <div class="section-tag">Why Choose Us</div>
+    <h2 class="section-title">More than a service provider.</h2>
+    <p class="section-sub">We focus on practical solutions that help businesses save time, generate leads, and grow faster — not just deliverables.</p>
+  </div>
+  <div class="services-grid">
+    <div class="svc-card">
+      <div class="svc-icon si-a" aria-hidden="true">⚡</div>
+      <div class="svc-title">Fast Delivery</div>
+      <p class="svc-desc">Most projects delivered in 1–4 weeks. We move quickly without cutting corners — you'll have a timeline before we start, and we stick to it.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon si-b" aria-hidden="true">🎯</div>
+      <div class="svc-title">Business-First Thinking</div>
+      <p class="svc-desc">Every solution is designed around your business goal — more leads, less manual work, better conversions — not just a pretty output.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon si-c" aria-hidden="true">🤝</div>
+      <div class="svc-title">Long-Term Support</div>
+      <p class="svc-desc">All projects include 30 days of post-launch support. We stay with you, answer your questions, and help you get the most from what we build.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TOOLS WE USE ═══ -->
+<section id="tools" aria-label="Tools and platforms we use">
+  <div class="sh">
+    <div class="section-tag">Our Tech Stack</div>
+    <h2 class="section-title">Powered by leading platforms.</h2>
+    <p class="section-sub">We use the best tools in the industry to build reliable, scalable solutions for your business.</p>
+  </div>
+  <div class="tools-grid" aria-label="Technology logos">
+    <div class="tool-badge">🤖 OpenAI</div>
+    <div class="tool-badge">⚙️ Make (Integromat)</div>
+    <div class="tool-badge">🔗 n8n</div>
+    <div class="tool-badge">⚡ Zapier</div>
+    <div class="tool-badge">💬 WhatsApp Business API</div>
+    <div class="tool-badge">📊 Google Workspace</div>
+    <div class="tool-badge">🛒 Shopify</div>
+    <div class="tool-badge">📧 Mailchimp</div>
+  </div>
+</section>
+
+<!-- ═══ PROCESS ═══ -->
+<section id="process" aria-label="Our process">
+  <div class="sh">
+    <div class="section-tag">Our Process</div>
+    <h2 class="section-title">Simple. Transparent. Effective.</h2>
+    <p class="section-sub">From idea to live system — here's exactly how we work together.</p>
+  </div>
+  <div class="process-track" role="list">
+    <div class="process-step" role="listitem">
+      <div class="process-num" aria-hidden="true">01</div>
+      <div class="process-icon" aria-hidden="true">🔍</div>
+      <div class="process-title">Discovery Call</div>
+      <p class="process-desc">Free 30-minute call where we understand your business, identify the biggest bottlenecks, and figure out where automation or a new system would make the most impact.</p>
+    </div>
+    <div class="process-connector" aria-hidden="true"></div>
+    <div class="process-step" role="listitem">
+      <div class="process-num" aria-hidden="true">02</div>
+      <div class="process-icon" aria-hidden="true">📝</div>
+      <div class="process-title">Strategy &amp; Proposal</div>
+      <p class="process-desc">We send you a clear scope document within 24 hours — what we'll build, how long it takes, what it costs, and exactly what you'll get. No surprises.</p>
+    </div>
+    <div class="process-connector" aria-hidden="true"></div>
+    <div class="process-step" role="listitem">
+      <div class="process-num" aria-hidden="true">03</div>
+      <div class="process-icon" aria-hidden="true">⚙️</div>
+      <div class="process-title">Build &amp; Launch</div>
+      <p class="process-desc">We build, test, and deploy your solution with regular updates throughout. You review before anything goes live. Then we support you for 30 days post-launch.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section id="testimonials" aria-label="Client testimonials">
+  <div class="sh">
+    <div class="section-tag">Client Results</div>
+    <h2 class="section-title">What clients say.</h2>
+    <p class="section-sub">Real feedback from businesses we've helped save time and grow.</p>
+  </div>
+
+  <div class="testimonials-grid">
+
+    <div class="tcard">
+      <div class="tcard-stars" aria-label="5 out of 5 stars">★★★★★</div>
+      <p class="tcard-quote">"SaptaAI delivered exactly what we needed. Professional communication, great execution, and on-time delivery. Our lead response time dropped from 2 days to under 10 minutes after they set up the automation."</p>
+      <div class="tcard-author">
+        <div class="tcard-avatar" aria-hidden="true">R</div>
+        <div>
+          <div class="tcard-name">Rahul M.</div>
+          <div class="tcard-role">Founder, Local Services Business · Hyderabad</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <div class="tcard-stars" aria-label="5 out of 5 stars">★★★★★</div>
+      <p class="tcard-quote">"We were spending 3 hours a day on manual follow-ups. SaptaAI automated the entire workflow in under 2 weeks. Now it runs itself. Best investment we made this year — saves us ₹40,000/month in staff time."</p>
+      <div class="tcard-author">
+        <div class="tcard-avatar" aria-hidden="true">P</div>
+        <div>
+          <div class="tcard-name">Priya S.</div>
+          <div class="tcard-role">Co-founder, E-commerce Brand · Bangalore</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <div class="tcard-stars" aria-label="5 out of 5 stars">★★★★★</div>
+      <p class="tcard-quote">"Fast, reliable, and they actually understand small business problems. The website they built gets us 5–8 new patient inquiries every week. ROI was visible in the first month."</p>
+      <div class="tcard-author">
+        <div class="tcard-avatar" aria-hidden="true">A</div>
+        <div>
+          <div class="tcard-name">Dr. Anil K.</div>
+          <div class="tcard-role">Owner, Dental Clinic · Hyderabad</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="testimonials-note">
+    <span>📌 Names shared with permission. Results may vary based on business type and scope.</span>
+  </div>
+</section>
+
+<!-- ═══ CTA BANNER ═══ -->
+<section id="cta-banner" aria-label="Call to action">
+  <div class="cta-card">
+    <div class="section-tag">Free Consultation — No Commitment</div>
+    <h2 class="section-title">Ready to put your business on autopilot?</h2>
+    <p class="section-sub">In a free 30-minute call, we'll identify exactly where AI and automation can save you time and generate more leads. No sales pitch — just a clear, actionable plan.</p>
+    <div class="hero-actions">
+      <a href="https://wa.me/918074916835?text=Hi%20SaptaAI,%20I%20would%20like%20a%20free%20consultation." target="_blank" rel="noopener" class="btn-primary">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Book Free Consultation
+      </a>
+      <a href="#contact" class="btn-ghost">Send Us a Message</a>
+    </div>
+    <div class="cta-reassurance">
+      <span>⚡ Reply within 4 hours</span>
+      <span>✓ No commitment required</span>
+      <span>🔒 100% confidential</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section id="faq" aria-label="Frequently asked questions">
+  <div class="sh">
+    <div class="section-tag">FAQ</div>
+    <h2 class="section-title">Frequently asked questions.</h2>
+    <p class="section-sub">Everything you need to know before getting started.</p>
+  </div>
+
+  <div class="faq-container" role="list">
+
+    <div class="faq-item" role="listitem" onclick="toggleFaq(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFaq(this)">
+      <div class="faq-header">
+        <h3>What services does SaptaAI provide?</h3>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </div>
+      <div class="faq-body">
+        <p>We provide AI automation, website development, digital marketing, business process automation, lead generation systems, and custom digital solutions. If your goal is saving time or generating more leads — we have a solution for it.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" role="listitem" onclick="toggleFaq(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFaq(this)">
+      <div class="faq-header">
+        <h3>How much does a project cost?</h3>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </div>
+      <div class="faq-body">
+        <p>Most websites start from ₹15,000 and automation workflows from ₹20,000. Pricing depends on project scope and complexity. Book a free consultation and we'll give you a custom, itemised quote within 24 hours — no hidden charges.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" role="listitem" onclick="toggleFaq(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFaq(this)">
+      <div class="faq-header">
+        <h3>How long does a project take?</h3>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </div>
+      <div class="faq-body">
+        <p>Simple websites in 5–7 days. Full automation systems in 2–4 weeks. We always give you a firm timeline in the project proposal before we begin, and we stick to it.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" role="listitem" onclick="toggleFaq(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFaq(this)">
+      <div class="faq-header">
+        <h3>Do I need to be tech-savvy to work with you?</h3>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </div>
+      <div class="faq-body">
+        <p>Not at all. We handle everything technical and explain all decisions in plain business language. You just tell us your goal — we figure out how to achieve it and keep you informed at every step.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" role="listitem" onclick="toggleFaq(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFaq(this)">
+      <div class="faq-header">
+        <h3>Do you provide support after delivery?</h3>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </div>
+      <div class="faq-body">
+        <p>Yes. Every project includes 30 days of post-launch support. We also offer ongoing retainer packages for businesses that want continuous optimization, updates, and priority support.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" role="listitem" onclick="toggleFaq(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFaq(this)">
+      <div class="faq-header">
+        <h3>What tools and platforms do you work with?</h3>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </div>
+      <div class="faq-body">
+        <p>We work with Make (Integromat), n8n, Zapier, OpenAI APIs, WhatsApp Business API, Google Workspace, Shopify, Mailchimp, and more. We recommend the right tool based on your existing setup and budget.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact" aria-label="Contact us">
+  <div class="contact-wrap">
+    <div class="sh">
+      <div class="section-tag">Get In Touch</div>
+      <h2 class="section-title">Let's build something together.</h2>
+      <p class="section-sub">Tell us about your business and what you want to achieve. We'll come back to you within 4 hours.</p>
+    </div>
+    <form class="contact-grid" id="contact-form" onsubmit="handleSubmit(event)" novalidate>
+      <div class="field-wrap">
+        <label for="fname">First Name</label>
+        <input class="field-input" type="text" id="fname" name="fname" autocomplete="given-name" required>
+      </div>
+      <div class="field-wrap">
+        <label for="lname">Last Name</label>
+        <input class="field-input" type="text" id="lname" name="lname" autocomplete="family-name">
+      </div>
+      <div class="field-wrap full">
+        <label for="email">Email Address</label>
+        <input class="field-input" type="email" id="email" name="email" autocomplete="email" required>
+      </div>
+      <div class="field-wrap full">
+        <label for="phone">WhatsApp / Phone (optional)</label>
+        <input class="field-input" type="tel" id="phone" name="phone" autocomplete="tel">
+      </div>
+      <div class="field-wrap full">
+        <label for="service" class="service-label">What can we help you with?</label>
+        <select class="field-input field-select" id="service" name="service">
+          <option value="" disabled selected>Select a service…</option>
+          <option value="ai-automation">AI Automation</option>
+          <option value="website-dev">Website Development</option>
+          <option value="digital-marketing">Digital Marketing</option>
+          <option value="lead-gen">Lead Generation System</option>
+          <option value="process-automation">Business Process Automation</option>
+          <option value="content-social">Content &amp; Social Media</option>
+          <option value="other">Other / Not Sure Yet</option>
+        </select>
+      </div>
+      <div class="field-wrap is-area full">
+        <label for="message">Tell us about your project</label>
+        <textarea class="field-input" id="message" name="message" placeholder=" "></textarea>
+      </div>
+      <div class="full contact-trust" role="list">
+        <span role="listitem"><i class="fa-solid fa-bolt" aria-hidden="true"></i> We reply within 4 hours</span>
+        <span role="listitem"><i class="fa-solid fa-lock" aria-hidden="true"></i> Your info is never shared</span>
+        <span role="listitem"><i class="fa-solid fa-check" aria-hidden="true"></i> No commitment required</span>
+      </div>
+      <div class="full">
+        <button type="submit" class="contact-submit" data-magnetic>Send Message →</button>
+      </div>
+    </form>
+    <div class="cinfo" role="list">
+      <div class="cinfo-item" role="listitem"><span class="cinfo-dot" aria-hidden="true"></span>saptaai07@gmail.com</div>
+      <div class="cinfo-item" role="listitem"><span class="cinfo-dot" aria-hidden="true"></span>Hyderabad, India</div>
+      <div class="cinfo-item" role="listitem"><span class="cinfo-dot" aria-hidden="true"></span>Open for new projects</div>
+    </div>
+  </div>
+</section>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/918074916835?text=Hi%20SaptaAI,%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener"
+   aria-label="Chat with SaptaAI on WhatsApp">
+  <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+</a>
+
+<!-- ═══ FOOTER ═══ -->
+<footer role="contentinfo">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">SaptaAI</div>
+      <p class="footer-tagline">AI Automation &amp; Digital Solutions<br>for businesses that want to grow.</p>
+      <div class="footer-social" role="list" aria-label="Social media links">
+        <a href="https://instagram.com/saptaai" target="_blank" rel="noopener" aria-label="SaptaAI on Instagram" role="listitem"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://linkedin.com/company/saptaai" target="_blank" rel="noopener" aria-label="SaptaAI on LinkedIn" role="listitem"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/saptaai" target="_blank" rel="noopener" aria-label="SaptaAI on Twitter / X" role="listitem"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+        <a href="https://wa.me/918074916835" target="_blank" rel="noopener" aria-label="SaptaAI on WhatsApp" role="listitem"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="footer-nav-col">
+      <div class="footer-col-title">Company</div>
+      <ul role="list">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why-us">Why Choose Us</a></li>
+        <li><a href="#process">Our Process</a></li>
+      </ul>
+    </div>
+    <div class="footer-nav-col">
+      <div class="footer-col-title">Services</div>
+      <ul role="list">
+        <li><a href="#services">AI Automation</a></li>
+        <li><a href="#services">Website Development</a></li>
+        <li><a href="#services">Digital Marketing</a></li>
+        <li><a href="#services">Lead Generation</a></li>
+      </ul>
+    </div>
+    <div class="footer-nav-col">
+      <div class="footer-col-title">Contact</div>
+      <ul role="list">
+        <li><a href="mailto:saptaai07@gmail.com">saptaai07@gmail.com</a></li>
+        <li><a href="https://wa.me/918074916835" target="_blank" rel="noopener">WhatsApp Us</a></li>
+        <li><a href="#contact">Send a Message</a></li>
+        <li><span style="color:var(--text-muted)">Hyderabad, India</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025 SaptaAI. All rights reserved.</p>
+    <p class="footer-copy" style="color:var(--text-muted)">Built with AI · Made in India 🇮🇳</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
