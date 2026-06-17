@@ -391,66 +391,6 @@ document.querySelectorAll('.field-input').forEach(inp => {
 });
 
 /* ══════════════════════════════════════════════
-   CONTACT FORM SUBMIT
-══════════════════════════════════════════════ */
-const form = document.getElementById("contact-form");
-
-form.addEventListener("submit", async function (e) {
-  e.preventDefault();
-
-  const btn = form.querySelector(".contact-submit");
-
-  btn.textContent = "Sending...";
-  btn.disabled = true;
-
-  const formData = new FormData(form);
-
-  try {
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
-    });
-
-    const result = await response.json();
-
-    if (result.success) {
-      btn.textContent = "✓ Message Sent!";
-
-      form.reset();
-
-      setTimeout(() => {
-        btn.textContent = "Send Message →";
-        btn.disabled = false;
-      }, 3000);
-    } else {
-      btn.textContent = "Try Again";
-      btn.disabled = false;
-      alert("Something went wrong. Please try again.");
-    }
-  } catch (error) {
-    btn.textContent = "Try Again";
-    btn.disabled = false;
-    alert("Network error. Please try again.");
-  }
-});
-
-function showFormError(msg) {
-  // Remove any existing error
-  const existing = document.querySelector('.form-error-msg');
-  if (existing) existing.remove();
-
-  const err = document.createElement('p');
-  err.className   = 'form-error-msg';
-  err.textContent = msg;
-  err.style.cssText = 'color:#f87171;font-size:.82rem;margin-top:-.4rem;margin-bottom:.4rem;grid-column:1/-1;';
-
-  const submitRow = document.querySelector('.contact-grid .full:last-child');
-  submitRow.before(err);
-
-  setTimeout(() => err.remove(), 4000);
-}
-
-/* ══════════════════════════════════════════════
    ACTIVE NAV LINK HIGHLIGHT
 ══════════════════════════════════════════════ */
 const sections = document.querySelectorAll('section[id]');
